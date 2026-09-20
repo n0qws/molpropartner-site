@@ -24,7 +24,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ========== ФОРМА ЗАЯВКИ → TELEGRAM ==========
-const TELEGRAM_BOT_TOKEN = "8534989382:AAElrB5VxCo8SJeZh5Lg2G4lV0eUsuCRA6I";
+const TELEGRAM_BOT_TOKEN = "8754533937:AAGUo1uDWbfpClzCLcUgh1WZZVRDXKfN_Pc";
 const TELEGRAM_CHAT_ID = "7555990786";
 
 const leadForm = document.getElementById('leadForm');
