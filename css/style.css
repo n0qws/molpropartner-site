@@ -521,6 +521,166 @@ section { padding: 80px 0; }
 .footer__bottom a { color: var(--gray-400); }
 .footer__bottom a:hover { color: var(--orange); }
 
+/* ========== ЗАГОЛОВОК СТРАНИЦЫ ========== */
+.page-hero {
+    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+.page-hero__title {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+.page-hero__subtitle {
+    font-size: 17px;
+    opacity: 0.85;
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* ========== ДЕТАЛЬНАЯ КАРТОЧКА ПРОДУКТА ========== */
+.product-detail {
+    padding: 80px 0;
+    background: var(--white);
+}
+.product-detail:nth-child(even) {
+    background: var(--gray-50);
+}
+.product-detail__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+.product-detail--reverse .product-detail__inner {
+    direction: rtl;
+}
+.product-detail--reverse .product-detail__content,
+.product-detail--reverse .product-detail__image {
+    direction: ltr;
+}
+
+.product-detail__label {
+    display: inline-block;
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--orange);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.product-detail__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 20px;
+    line-height: 1.25;
+}
+.product-detail__text {
+    font-size: 16px;
+    color: var(--gray-600);
+    line-height: 1.75;
+    margin-bottom: 24px;
+}
+.product-detail__subtitle {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 16px;
+}
+.product-detail__content .btn {
+    margin-top: 24px;
+}
+
+.product-detail__image {
+    aspect-ratio: 3 / 4;
+    max-height: 560px;
+    width: 100%;
+}
+
+/* ========== СПИСОК ПРЕИМУЩЕСТВ ========== */
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+.features-list li {
+    position: relative;
+    padding-left: 32px;
+    font-size: 15px;
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+.features-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background: var(--orange);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ========== CTA-БЛОК ========== */
+.cta-block {
+    background: linear-gradient(135deg, var(--gray-900), var(--gray-800));
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+.cta-block__title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.cta-block__text {
+    font-size: 16px;
+    color: var(--gray-300);
+    max-width: 640px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+}
+
+/* ========== ЗАГЛУШКА ДЛЯ ФОТО ПРОДУКЦИИ ========== */
+.img-placeholder--product {
+    background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
+    border: 2px dashed var(--gray-300);
+    border-radius: var(--radius);
+    height: 100%;
+}
+
+/* ========== АДАПТИВ ДЛЯ PRODUCTS ========== */
+@media (max-width: 768px) {
+    .page-hero { padding: 48px 0; }
+    .page-hero__title { font-size: 28px; }
+    .page-hero__subtitle { font-size: 15px; }
+
+    .product-detail { padding: 48px 0; }
+    .product-detail__inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .product-detail--reverse .product-detail__inner {
+        direction: ltr;
+    }
+    .product-detail__title { font-size: 24px; }
+    .product-detail__image { max-height: 420px; }
+
+    .cta-block { padding: 56px 0; }
+    .cta-block__title { font-size: 22px; }
+}
+
 /* ========== АДАПТИВ ========== */
 @media (max-width: 1024px) {
     .advantages__grid { grid-template-columns: repeat(2, 1fr); }
